@@ -44,7 +44,7 @@ public class AuthenticationController {
 
 	@Value("${ADMIN_SECRET_KEY}")
 	private String adminSecretKey;
-
+//sign-in
 	@PostMapping("/sign-in")
 	public ResponseEntity<?> validateuserAndCreateJwtToken(@RequestBody AuthRequest authReq) throws IOException {
 		UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(authReq.getEmail(),
